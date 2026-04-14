@@ -1,0 +1,323 @@
+@media (min-width: 1097px) and (max-width:1231px) {
+    .right-col-body {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .left-col-body {
+    margin-left: 12px;
+    }
+    
+    .right-nav {
+        gap: 0px;
+    }
+
+    .nav-1 ul li {
+        padding: 0px 18px;
+    }
+    .main-nav {
+        width: 73%;
+    }
+    
+}
+
+
+@media (min-width: 991.98px) and (max-width:1096px) {
+    .right-col-body {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+     .left-col-body {
+    margin-left: 12px;
+    }
+
+    .right-nav {
+        gap: 0px;
+    }
+
+    .nav-1 ul li {
+        padding: 0px 12px;
+        font-size: 15px;
+    }
+
+    .nav-1 ul li a{
+        font-size: 15px;
+    }
+
+    .main-nav {
+        width: 73%;
+    }
+}
+
+                                                             /* medium screen & small  */
+
+@media (max-width: 991.98px) {
+   
+    .main-nav {
+        /* position: fixed !important; */
+        bottom: 30px;
+        top: auto;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: auto;
+        background-color: rgba(0, 0, 0, 0.03);
+            backdrop-filter: blur(10px);
+            border-radius: 20px !important;
+    }
+
+
+    .nav-1 ul li {
+        backdrop-filter: none;
+        padding: 0px;
+        width: 44px;   
+        height: 44px;
+        border-radius: 20px !important;
+    }
+
+    .nav-1 ul li:hover {
+       background: var(--rounded-tag-bg);
+    }
+
+    .nav-1 ul li:hover a i{
+        color: var(--rounded-tag-text) !important;
+    }
+
+    .nav-1 ul li a i {
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--text-color);
+    }
+
+    .nav-1 ul { 
+        gap: 0px;
+    }
+
+    .day-night {
+        backdrop-filter: none;
+        height: 44px;
+        width: 44px;
+    }
+
+    .right-nav {
+        gap: 0px;
+    }
+
+.talk {
+    padding: 0px;
+    width: 44px;   
+    height: 44px;
+    border-radius: 20px !important;
+}
+
+.talk i {
+    transform: translate(8px, 0px) !important;
+}
+
+/* left-col-body  */
+
+
+.left-column {
+    position: static;
+    height: auto;  
+}
+
+.left-col-body {
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 30px;
+    /* margin-bottom: 20px; */
+    padding: 30px;
+    height: auto;
+    position: static;
+}
+
+.avatar-image {
+    height: auto;
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+
+.avatar-text-content h6 {
+    margin-bottom: 5px !important;
+}
+
+.avatar-text-content p {
+    margin-bottom: 16px !important;
+}
+
+.social-links {
+    margin-bottom: 24px;
+}
+
+
+/* meet */
+
+
+
+.meet {
+    margin-top: 150px;
+}
+
+/* .meetext {
+    font-size: 50px;
+    line-height: 60px;
+} */
+
+.rotating-btn {
+    position: static;
+    margin-top: 60px;
+}
+
+/* my education */
+
+.dfdfd {
+    padding: 0px;
+}
+
+
+}
+                                                             /* medium screen */
+
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+    .right-col-body {
+        margin-left: 32px !important;
+        margin-right: 32px !important;
+    }
+
+    .portfoliotext {
+        font-size: 38px;
+    }
+
+    .portfolio {
+        margin-top: 150px;
+    }
+
+    
+
+}
+
+
+
+
+                                                                /* small screen */
+@media (max-width: 767.98px) {
+
+    .right-col-body {
+        margin-left: 16px !important;
+        margin-right: 16px !important;
+    }
+  
+.left-col-body {
+        padding: 30px 16px !important;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    /* .meetext {
+    font-size: 32px;
+    line-height: 38px;
+}   */
+
+.work-download {
+    flex-direction: column;
+}
+
+.forsmlbtn {
+    width: 100%;
+}
+
+.gallery-item {
+    padding: 0px;
+}
+
+.portfoliotext {
+        font-size: 34px;
+        line-height: 41px;
+    }
+
+    .portfolio-cards {
+        margin-top: 0px;
+    }
+
+    .portfolio {
+        margin-top: 120px;
+    }
+
+
+                                                                /* about me */
+
+    .happy-client {
+        margin-top: 30px;
+    }
+
+    .columncard {
+        padding: 0px;
+    }
+
+    .about-info {
+        margin-top: 50px;
+    }
+    
+    .abtbtn { 
+        width: 100%;
+    }
+
+    .digital {
+        margin-top: 30px;
+    }
+
+    .frontend, .digital, .seo, .brand {
+        padding: 0px;
+    }
+
+    /* myeducation */
+
+     .resume-lines-date { 
+        margin-top: 0px !important;
+        margin-bottom: 18px !important;
+     }
+
+     .resume-lines-descr {
+        margin-top: 20px;
+     }
+
+     .last-text-p {
+        max-width: 100%;
+        font-size: 24px;
+        line-height: 31px;
+     }
+
+     .tag-outline {
+        font-size: 13px;
+     }
+
+}
+
+
+
+
+
+
+
+/* --- Responsive Adjustments Swiper --- */
+
+/* Mobile (Extra Small) */
+@media (max-width: 576px) {
+  .testimonial { margin-top: 80px; }
+  .swiper-slide { padding: 20px; border-radius: 20px; }
+  .revimg { width: 70px; height: 70px; }
+  .revhead h5 { font-size: 18px; }
+  .revpara p { font-size: 16px; line-height: 24px; }
+}
+
+/* Tablets & Medium Screens */
+@media (min-width: 577px) and (max-width: 991px) {
+  .revpara p { font-size: 18px; }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1400px) {
+  .testimonial { max-width: 1320px; margin-left: auto; margin-right: auto; }
+}

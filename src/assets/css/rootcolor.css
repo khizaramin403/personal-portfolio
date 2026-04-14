@@ -1,0 +1,58 @@
+ /* 🌞 Light Theme (Default) */
+:root {
+    /* --bg-color: #e3e6f3; */
+    --bg-color: #dad5ec;
+    --text-color: #717586;
+    --text-color-hover: #22232c;
+    --text-color-border: #0000004d;
+    --bg-tbtn-accent: #aa70e0;
+    --bg-tbtn-secondary: #7059e2;
+    --tbt-text-color: #ebf0f7;
+    --tbt-icon-color: #ebf0f7;
+    --lidark-icon-color: #666a79;
+    --meetbtn-border: #d1d5e0;
+    --meetbtn-text: #424550;
+    --meetbtn-bg: #e6ebf4;
+    --meetext-color: #6b50c6;
+    --rounded-tag-bg: #111111;
+    --rounded-tag-text: #ebf0f7;
+    --alex-bg: #ebf0f7;
+    --avatar-text: #424550;
+    --card-bg: #e6ebf4;
+    --card-bg-border: #d1d5e0;
+    --meetbtn-border-1: #b4b5b6;
+    --swiper-btn-border: #a8b0c1;
+    --last-icon: #969bb2;
+}
+
+/* 🌙 Dark Theme */
+:root.dark {
+    /* --bg-color: #111111; */
+    --bg-color: #080a0f;
+    --text-color: #8b8a91;
+    --text-color-hover: #e9e9f1;
+    --text-color-border: #ffffff4d;
+    --bg-tbtn-accent: #E4B8BF;
+    --bg-tbtn-secondary: #CEC4EF;
+    --tbt-text-color: #121319;
+    --tbt-icon-color: #121319;
+    --lidark-icon-color: #a1a1af;
+    --meetbtn-border: #303033;
+    --meetbtn-text: #C7C6D3;
+    --meetbtn-bg: #111111;
+    --meetext-color: #E1BAC5;
+    --rounded-tag-bg: #fafafa;
+    --rounded-tag-text: #121319;
+    --alex-bg: #161616;
+    --avatar-text: #C7C6D3;
+    --card-bg: #111111;
+    --card-bg-border: #303033;
+    --meetbtn-border-1: #303033;
+    --swiper-btn-border: #4B4B51;
+    --last-icon: #969bb2;
+}
+
+
+
+
+
