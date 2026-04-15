@@ -5,7 +5,7 @@
     }
 
     .left-col-body {
-    margin-left: 12px;
+    /* margin-left: 12px; */
     }
     
     .right-nav {
@@ -29,7 +29,7 @@
     }
 
      .left-col-body {
-    margin-left: 12px;
+    /* margin-left: 12px; */
     }
 
     .right-nav {
@@ -320,4 +320,68 @@
 /* Extra Large Screens */
 @media (min-width: 1400px) {
   .testimonial { max-width: 1320px; margin-left: auto; margin-right: auto; }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 767.98px) {
+    .left-column {
+        padding: 0px !important;
+    }
+
+    .left-col-body {
+        margin: 0px !important;
+    }
+
+    .work {
+        margin-top: 0px;
+    }
+
+    .work-btn {
+        margin-top: 0px;
+    }
+
+    .meet, .portfolio, .about, .about-cards, .resume, .contact-lets, .last {
+        margin-top: 62px !important;
+    }
+
+    .resume, .education {
+        margin-bottom: 62px !important;
+    }
+
+    .body {
+        padding: 30px 16px !important;
+    }
+
+    .right-col-body {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+}
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .left-col-body {
+        margin: 0px;
+    }
+
+    .left-column {
+        padding: 32px !important;
+    }
+
+    .work {
+        margin: 0px;
+    }
+
+    .work-btn {
+        margin-top: 0px;
+    }
 }

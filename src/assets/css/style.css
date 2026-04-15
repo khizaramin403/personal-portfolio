@@ -22,22 +22,95 @@ body {
     margin: 0px;
     padding: 0px;
     transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+    /* overflow-x: hidden; */
 }
 
 .right-col-body {
-    margin-left: 30px;
-    margin-right: 60px;
+    /* margin-left: 30px; */
+    margin-right: 20px;
 }
 
 .left-column {
     position: sticky;
     height: 100vh;
     top: 0px;
+
+
+
+    padding: 25px !important; /* Side spacing jo aapko chahiye */
+    display: flex;
+    flex-direction: column;
 }
+
+/* White Card - Isay hamesha 100% width par rakhein */
+.left-col-body {
+    padding: 25px;
+    width: 100%; /* Column ki poori width lega bina bahar nikle */
+    height: calc(100vh - 50px); /* 50px gap (top/bottom margin ke liye) */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Is se button hamesha niche rahega */
+    border: 1px solid var(--text-color-border);
+    box-sizing: border-box; /* Zaroori: padding ko width ke andar rakhta hai */
+    overflow-y: auto; /* Agar content zyada ho jaye toh scroll ho sake */
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Image Stretch Fix - Image hamesha card ki width cover karegi */
+.avatar-image {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+/* Text aur Font Adjustment */
+.avatar-text-content h6 {
+    font-size: clamp(22px, 1.2vw, 18px) !important; /* Bari screen par khud bara hoga */
+    font-weight: 700;
+}
+
+.avatar-text-content p {
+    font-size: clamp(16px, 1vw, 16px);
+}
+
+/* Let's Work Together Button */
+.work-btn {
+    width: 100%;
+    padding: 15px 5%;
+    /* Button text ko wrap hone se rokay ga agar jagah kam ho */
+    font-size: clamp(13px, 1.1vw, 16px); 
+    font-weight: 700;
+    border-radius: 20px;
+    background: var(--button-gradient);
+    border: none;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Mobile Fix */
+@media (max-width: 991px) {
+    .left-column {
+        height: auto;
+        position: relative;
+        padding: 16px !important;
+    }
+}
+
+
+
+
+
+
+
 
 .right-column {
     position: relative;
 }
+
+
 
 
 
@@ -388,6 +461,7 @@ body {
 .gallery-item {
     margin-top: 30px;
     perspective: 1000px;
+    cursor: pointer;
   /* overflow: hidden;  */
 }
 
@@ -414,9 +488,64 @@ body {
     align-items: center;
     gap: 10px;
     position: absolute;
-    bottom: 30px;
-    left: 40px;
+    /* bottom: 30px;
+    left: 40px; */
+
+
+    top: clamp(30px, 2.5vw, 22px);   /* responsive top spacing */
+  left: clamp(40px, 3vw, 26px);    /* responsive left spacing */
+  bottom: unset;                    /* remove old bottom positioning */
 }
+
+
+/* Project name tag */
+.project-name-tag {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  border-radius: 50px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  
+  /* Responsive font + padding using clamp */
+  font-size: clamp(11px, 1.4vw, 15px);
+  padding: clamp(5px, 1vw, 9px) clamp(12px, 2vw, 20px);
+  
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  transition: background 0.3s ease, transform 0.2s ease;
+  pointer-events: none; /* card click handles it, not the tag */
+}
+
+
+/* Hover on card lifts the tag slightly */
+.gallery-item:hover .project-name-tag {
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-2px);
+}
+
+/* Extra small screens (< 576px) */
+@media (max-width: 575.98px) {
+  .card-tags {
+    top: 30px;
+    left: 30px;
+  }
+}
+
+/* Small (576px – 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .card-tags {
+    top: 30px;
+    left: 30px;
+  }
+}
+
+/* Medium and up (768px+) — clamp handles these naturally */
 
 .rounded-tag {
     border: none;
@@ -472,7 +601,7 @@ body {
     }
 }
 
-/* modal */
+                                            /* modal */
 
 .modal-contet {
     background: #111111;
@@ -481,6 +610,8 @@ body {
     border-radius: 20px;
     position: relative; /* Button iske hisab se align hoga */
     overflow: hidden; /* Agar button thoda bahar nikal raha ho toh handle karne ke liye */
+
+    
 }
 
 .body-model {
@@ -525,6 +656,8 @@ body {
     transition: all 0.3s ease;
 }
 
+
+
 /* .my-close-btn i {
     font-size: 24px;
     color: #CEC4EF;
@@ -551,21 +684,118 @@ body {
     }
 }
 
+/* Text content box */
 .text-content {
-    border-radius: 20px;
-    padding: 30px;
-    background: #000000;
-    margin-top: 20px;
+    border-radius: 16px;
+    padding: 24px;
+    background: #f5f5f7;   /* light Apple-style grey */
+    margin-top: 16px;
+    width: 100%;
 }
 
+/* .text-content {
+    border-radius: 20px;
+    padding: 30px;
+    background: #ffffff;
+    margin-top: 20px;
+} */
+
+/* Title */
 .isometric {
     font-family: syne;
     font-weight: 700;
     font-size: 24px;
-    color: #e9e9f1;
+    color: #1a1a2e;
+    margin-bottom: 16px !important;
 }
 
-.illu-3d {
+/* .isometric {
+    font-family: syne;
+    font-weight: 700;
+    font-size: 24px;
+    color: #1b1b1b;
+} */
+
+
+
+/* Body text */
+.illu-para {
+    font-family: syne;
+    font-weight: 400;
+    font-size: clamp(13px, 2vw, 15px);
+    line-height: 24px;
+    color: #3a3a4a;
+    margin-top: 0 !important;
+}
+
+.illu-para p {
+    color: #3a3a4a;
+}
+
+.illu-para ul li {
+    color: #3a3a4a;
+    margin-bottom: 6px;
+    font-size: clamp(13px, 2vw, 15px);
+}
+
+.features-heading {
+    color: #1a1a2e;
+    font-family: syne;
+}
+
+/* Store buttons row */
+.store-btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.store-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-family: syne;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+}
+
+.play-btn {
+    background: #1a1a2e;
+    color: #ffffff;
+}
+
+.apple-btn {
+    background: #1a1a2e;
+    color: #ffffff;
+}
+
+.store-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    color: #ffffff;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .my-close-btn {
+        top: 10px;
+        right: 10px;
+    }
+    .store-btns {
+        flex-direction: column;
+    }
+    .store-btn {
+        justify-content: center;
+    }
+}
+
+/* .illu-3d {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -589,22 +819,22 @@ body {
     font-size: 18px;
     line-height: 26px;
     color: var(--rounded-tag-text);
-    /* margin-top: 22px !important; */
+
 }
 
 .rounded-tag-1 {
     background: var(--meetbtn-bg) !important;
     color: var(--text-color-hover);
     font-family: syne;
-}
+} */
 
 
-/* left-col-body */
+                                            /* left-col-body */
 
 .left-col-body {
-    margin-left: 60px;
-    margin-right: 0px;
-    margin-top: 30px;
+    /* margin-left: 60px; */
+    /* margin-right: 0px; */
+    /* margin-top: 30px; */
     /* margin-bottom: 30px; */
     padding: 14px;
     border: 1px solid var(--text-color-border);
@@ -666,7 +896,7 @@ body {
 }
 
 .social-links  {
-    margin-top: 5px;
+    margin-top: 20px;
 }
 
 .social-links ul {
@@ -711,7 +941,7 @@ display: flex;
 }
 
 .work {
-    margin-top: 6px;
+    /* margin-top: 6px; */
 }
 
 .work-btn {
@@ -1503,7 +1733,7 @@ width: 100px;
         /* Mobile */
         @media (max-width: 480px) {
             body {
-                padding: 30px 15px;
+                padding: 30px 16px;
             }
 
             .input-field,

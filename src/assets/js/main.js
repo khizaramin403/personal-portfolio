@@ -189,3 +189,49 @@ $(document).ready(function () {
 
 
 
+
+
+
+
+
+
+
+
+
+// Counting animation on scroll
+$(document).ready(function () {
+  function animateCount($el, target, duration) {
+    let start = 0;
+    let increment = target / (duration / 16);
+    let timer = setInterval(function () {
+      start += increment;
+      if (start >= target) {
+        start = target;
+        clearInterval(timer);
+      }
+      $el.text(Math.floor(start) + '+');
+    }, 16);
+  }
+
+  let animated = false;
+
+  $(window).on('scroll', function () {
+    if (animated) return;
+
+    let section = $('.abtme-cards');
+    if (section.length === 0) return;
+
+    let sectionTop = section.offset().top;
+    let windowBottom = $(window).scrollTop() + $(window).height();
+
+    if (windowBottom >= sectionTop + 100) {
+      animated = true;
+
+      $('.happy-nmber').each(function () {
+        let text = $(this).text();
+        let target = parseInt(text.replace('+', ''));
+        animateCount($(this), target, 1500);
+      });
+    }
+  });
+});
